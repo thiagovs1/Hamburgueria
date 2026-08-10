@@ -1,3 +1,0 @@
-# Hamburgueria kljihyvty
-
-# O problema
