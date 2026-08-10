@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=8.0">
+    <title>Carrinho</title>
+
+    <link rel="stylesheet" href="../css-carrinho/carrinho.css">
+
+</head>
+<body>
+
+<header class="topo">
+    <a href="../html/tela-inicial.html">
+    <img src="../imagens/logo.png" class="logo">
+    </a>
+        <nav>
+            <a href="../html/tela-inicial.html">Inicio</a>
+            <a href="../html/tela-inicial.html">Promoções do dia</a>
+            <a href="../html/cardapio.html">Cardápio</a>
+            <a href="../html/tela-inicial.html">Contato</a>
+            <a href="../html/avaliacoes.html">Avaliações</a>
+        </nav>
+
+        <div class="icones">
+            <img src="../imagens/perfil.png" class="icone-img">
+            <img src="../imagens/carrinho.png" class="icone-img">
+        </div>
+
+</header>
+
+<section class="pedidos">
+    <div class="produtos">
+
+        <div class="pedido-card pao">
+
+            <div class="info">
+                <img src="../imagens/burger5.png">
+                    <p> Burguer simples – Pão australiano, carne, queijo cheddar, alface e tomate</p>
+                    <span>R$ 20,00</span>
+            </div>
+
+            <div class="controles">
+                <div class="btn">-</div>
+                <div class="quantidade">1</div>
+                <div class="btn">+</div>
+            </div>
+
+        </div>
+
+        <div class="pedido-card carne">
+
+            <div class="info">
+                <img src="../imagens/coca.png">
+                    <p>Coca Cola - 1L</p>
+                    <span>R$ 7,99</span>
+            </div>
+
+            <div class="controles">
+                <div class="btn">-</div>
+                <div class="quantidade">1</div>
+                <div class="btn">+</div>
+            </div>
+
+        </div>
+
+        <div class="pedido-card carne">
+
+            <div class="info">
+                <img src="../imagens/Barbecue.png">
+                    <p>Molho barbecue 150g</p>
+                    <span>R$ 4,99</span>
+            </div>
+
+            <div class="controles">
+                <div class="btn">-</div>
+                <div class="quantidade">1</div>
+                <div class="btn">+</div>
+            </div>
+
+        </div>
+
+        <div class="pedido-card pao">
+
+            <div class="info">
+                <img src="../imagens/burguer4.png">
+                    <p>
+                        Smash Burguer Duplo - Dois smash burgers,
+                        queijo, picles e molho da casa.
+                    </p>
+                    <span>R$ 25,00</span>
+            </div>
+
+            <div class="controles">
+                <div class="btn">-</div>
+                <div class="quantidade">1</div>
+                <div class="btn">+</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="resumo">
+
+        <div class="box">
+            <h2>Resumo do Pedido</h2>
+
+            <div class="linha">
+                <span>Subtotal:</span>
+                <span>75,98</span>
+            </div>
+
+            <div class="linha">
+                <span>Entrega:</span>
+                <span>5,00</span>
+            </div>
+
+            <div class="linha total">
+                <span>Total:</span>
+                <span>80,98</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Observação:</h2>
+
+            <div class="obs">
+                <textarea rows="4" cols="20" maxlength="100"> Sem cebola no hambúrguer simples.</textarea>
+            </div>
+        </div>
+
+        <div class="botoes">
+            
+            <button class="cancelar" onclick="window.location.href='../html/tela-inicial.html'">
+                Cancelar
+            </button>
+
+            <button class="confirmar" onclick="window.location.href='endereco.html'">
+             Confirmar
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+</body>
+</html>

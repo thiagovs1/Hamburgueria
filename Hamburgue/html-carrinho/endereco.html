@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Endereço de Entrega</title>
+
+    <link rel="stylesheet" href="../css-carrinho/endereco.css">
+    <link rel="stylesheet" href="../css-carrinho/carrinho.css">
+
+</head>
+
+<body>
+    
+
+    <header class="topo">
+    <a href="../html/tela-inicial.html">
+    <img src="../imagens/logo.png" class="logo">
+    </a>
+         <nav>
+            <a href="../html/tela-inicial.html">Inicio</a>
+            <a href="../html/tela-inicial.html">Promoções do dia</a>
+            <a href="../html/cardapio.html">Cardápio</a>
+            <a href="../html/contato.html">Contato</a>
+            <a href="../html/avaliacoes.html">Avaliações</a>
+        </nav>
+
+        <div class="icones">
+            <img src="../imagens/perfil.png" class="icone-img">
+            <img src="../imagens/carrinho.png" class="icone-img">
+        </div>
+
+    </header>
+
+<section class="entrega-section">
+
+        <div class="entrega-container">
+
+            <div class="form-endereco">
+                <label>Cidade:</label>
+                <input type="text" value="Colinas - TO">
+
+                <label>Estado</label>
+                <input type="text" value="Tocantins">
+
+                <label>Endereço:</label>
+                <input type="text" value="Rua Alegria, 1234">
+
+                <label>Setor:</label>
+                <input type="text" value="Norte">
+
+                <label>Informação Adicional:</label>
+                <textarea rows="4" cols="20" maxlength="100">Portão Vermelho</textarea>
+            </div>
+
+            <div class="entrega-opcoes">
+
+                <div class="opcao-box">
+
+                    <div class="opcao">
+                        <label>
+                            <input type="radio" name="entrega">
+                            Retirada
+                        </label>
+
+                        <img src="../imagens/moto.png">
+                    </div>
+
+                    <div class="opcao">
+                        <label>
+                            <input type="radio" name="entrega" checked>
+                            Entrega
+                        </label>
+
+                        <img src="../imagens/moto.png">
+                    </div>
+
+                </div>
+
+                <div class="botoes-entrega">
+                    <button type="button" class="btn-cancelar" onclick="window.location.href='carrinho.html'">
+                         Cancelar
+                     </button>
+                    <button type="button" class="btn-confirmar" onclick="window.location.href='forma-pagamento.html'">
+                        Confirmar
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+</body>
+</html>

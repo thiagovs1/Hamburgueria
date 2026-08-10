@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>CerradoBurguer</title>
+    <link rel="stylesheet" href="../css/tela-inicial.css">
+    <link rel="stylesheet" href="../css/menu_perfil.css">
+</head>
+<body>
+
+<div id="mensagem-alerta"></div>
+
+
+<div id="modalExcluir" class="modal-excluir">
+    <div class="modal-conteudo">
+        <h2>Atenção!</h2>
+        <p>Tem certeza que deseja apagar seu perfil? Esta ação não pode ser desfeita.</p>
+        <div class="botoes-modal">
+            <button class="btn-modal btn-cancelar" onclick="fecharModal()">Cancelar</button>
+            <a id="linkConfirmarExclusao" href="../crud/deletar.php" class="btn-modal btn-confirmar" style="text-decoration: none;">Sim, Apagar</a>
+        </div>
+    </div>
+</div>
+ 
+<header class="topo">
+    
+    <img src="../imagens/logo.png" class="logo">
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#promocoes">Promoções</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="#avaliacao">Avaliações</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="icons" id="area-perfil">
+          
+            <a href="../crud/login.html">
+                <img src="../imagens/Perfil.png" alt="Perfil">
+            </a>
+
+            <a href="../html-carrinho/carrinho.html">
+                <img src="../imagens/carrinho.png" class="icone-img">
+            </a>
+        </div>
+</header>
+
+<section id="inicio">
+    <div class="tela-preta"></div>
+
+    <div class="inicio-conteudo">
+        <div class="card-destaque">
+            <span class="numero">2</span>  
+            <div class="info">
+                <h2>Acompanhamentos de sua preferência</h2>
+                <p class="preco">R$ 17,90</p>
+                <span class="add">+</span>
+            </div>
+            <img src="../imagens/combo.png">
+        </div>
+
+        <div class="card-destaque escuro">
+            <span class="numero">3</span>
+            <div class="info">
+                <h2>Supremo Burguer</h2>
+                <p class="preco">R$ 87,90</p>
+                <span class="add">+</span>
+            </div>
+            <img src="../imagens/amburgueres.png">
+        </div>
+
+  </div>
+</section>
+
+<section id="promocoes">
+    <div class="proms">
+
+         <div class="promo-card claro">
+            <h3>Cheddar Burguer</h3>
+            <img src="../imagens/Amburguer_card.png">
+                <ul>
+                    <li>Pão Brioche</li>
+                    <li>Carne</li>
+                    <li>Queijo cheddar</li>
+                    <li>Molho especial</li>
+                </ul>
+        <p class="preco-antigo">De: 28,00 R$</p>
+        <p class="preco-novo">Por: 25,99 R$</p>
+        <span class="add">+</span>
+
+    </div>
+
+    <div class="promo-card marrom">
+         <h3>Hambúrguer Simples</h3>
+        <img src="../imagens/burger5.png">
+          <ul>
+            <li>Pão</li>
+            <li>Carne</li>
+            <li>Queijo cheddar</li>
+            <li>alface</li>
+            <li>Tomate</li>
+         </ul>
+        <p class="preco-antigo">De: 20,00 R$</p>
+        <p class="preco-novo">Por: 18,00 R$</p>
+        <span class="add">+</span>
+    </div>
+
+    <div class="promo-card claro">
+        <h3>Coca Cola 1L</h3>
+        <img src="../imagens/coca.png">
+        <p class="preco-antigo">De: 8,99 R$</p>
+        <p class="preco-novo">Por: 6,99 R$</p>
+        <span class="add">+</span>
+    </div>
+
+    <div class="promo-card amarelo">
+         <h3>X-Burguer</h3>
+         <img src="../imagens/amini.png">
+            <ul>
+                <li>Pão</li>
+                <li>Carne</li>
+                <li>Bacon</li>
+                <li>Queijo</li>
+            </ul>
+        <p class="preco-antigo">De: 38,00 R$</p>
+        <p class="preco-novo">Por: 27,99 R$</p>
+        <span class="add">+</span>
+    </div>
+</section>
+       
+<section id="contato">
+
+    <div class="contato-info">
+        <h1>Contato</h1>
+
+        <h2>CERRADO BURGUER</h2>
+
+        <p class="email-contato">
+            E-mail: <span>cerrado_burguer@gmail.com</span>
+        </p>
+    </div>
+
+    <div class="contato-formulario">
+        <p>Utilize o formulário abaixo para nos enviar uma mensagem</p>
+
+        <form>
+
+            <label>Nome</label>
+            <input type="text" required>
+
+            <label>E-mail</label>
+            <input type="email" required>
+
+            <label>Assunto</label>
+            <input type="text" required>
+
+            <label>Mensagem</label>
+            <textarea required></textarea>
+
+            <button type="submit" class="btn-contato">
+                Enviar
+            </button>
+        </form>
+    </div>
+
+</section>
+
+<script>
+    // Verificar sessão via AJAX
+    fetch('../crud/check_session.php')
+        .then(response => response.json())
+        .then(data => {
+            const areaPerfil = document.getElementById('area-perfil');
+            if (data.logado) {
+                areaPerfil.innerHTML = `
+                    <div class="user-menu">
+                        <img src="../imagens/Perfil.png" alt="Perfil" style="pointer: cursor;">
+                        <div class="user-dropdown">
+                            <a href="../crud/perfil.php">Meu Perfil</a>
+                            <a href="../crud/login.html">Sair</a>
+                            <a href="#" class="btn-delete" onclick="abrirModal(event)">Apagar Perfil</a>
+                        </div>
+                    </div>
+                    <a href="../html-carrinho/carrinho.html">
+                        <img src="../imagens/carrinho.png" class="icone-img">
+                    </a>
+                `;
+            }
+        });
+
+    // Mostrar mensagens de erro/sucesso vindas da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const erro = urlParams.get('erro');
+    const sucesso = urlParams.get('sucesso');
+    const alerta = document.getElementById('mensagem-alerta');
+
+    if (erro || sucesso) {
+        alerta.innerText = erro || sucesso;
+        alerta.style.display = 'block';
+        alerta.style.backgroundColor = erro ? '#ffcccc' : '#ccffcc';
+        alerta.style.color = erro ? 'red' : 'green';
+        alerta.style.border = `1px solid ${erro ? 'red' : 'green'}`;
+        
+        setTimeout(() => {
+            alerta.style.display = 'none';
+        }, 5000);
+    }
+
+    // Funções do Modal
+    function abrirModal(e) {
+        e.preventDefault();
+        document.getElementById('modalExcluir').style.display = 'flex';
+    }
+
+    function fecharModal() {
+        document.getElementById('modalExcluir').style.display = 'none';
+    }
+
+    // Fechar modal ao clicar fora dele
+    window.onclick = function(event) {
+        const modal = document.getElementById('modalExcluir');
+        if (event.target == modal) {
+            fecharModal();
+        }
+    }
+</script>
+
+<!-- =========================
+     AVALIAÇÕES
+========================== -->
+
+<section id="avaliacao">
+
+    <div class="avaliacoes">
+
+        <div class="cabecalho-avaliacao">
+
+            <div class="info-restaurante">
+
+                <img src="../imagens/logo.png" class="logo-avaliacao">
+
+                <div class="nome-restaurante">
+                    <h2>Hamburgueria<br>Hambúrguer do Cerrado</h2>
+                    <p>Veja o que nossos clientes estão dizendo.</p>
+                </div>
+
+            </div>
+
+            <button id="abrirComentario" class="btn-comentar">
+                ✎ Comentar
+            </button>
+
+        </div>
+
+        <h3 class="titulo-comentarios">
+            Comentários
+        </h3>
+
+        <!-- Comentário 1 -->
+
+        <div class="comentario">
+
+            <div class="foto-usuario">
+                👤
+            </div>
+
+            <div class="conteudo-comentario">
+
+                <div class="nome">
+                    Otávio Pereira de Rosa
+                </div>
+
+                <div class="tempo">
+                    1 semana atrás
+                </div>
+
+                <div class="estrelas-texto">
+                    ★★★★★
+                </div>
+
+                <div class="texto-comentario">
+                    Excelente atendimento.
+                </div>
+
+                <div class="acoes">
+                    <a href="">↩ Responder</a>
+                    <a href="">👍 Curtir</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Comentário 2 -->
+
+        <div class="comentario">
+
+            <div class="foto-usuario">
+                👤
+            </div>
+
+            <div class="conteudo-comentario">
+
+                <div class="nome">
+                    Nathalia de Souza
+                </div>
+
+                <div class="tempo">
+                    1 semana atrás
+                </div>
+
+                <div class="estrelas-texto">
+                    ★★★★★
+                </div>
+
+                <div class="texto-comentario">
+                    Adorei o atendimento. Os preços são ótimos!
+                </div>
+
+                <div class="acoes">
+                    <a href="#">↩ Responder</a>
+                    <a href="#">👍 Curtir</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Comentário 3 -->
+
+        <div class="comentario">
+
+            <div class="foto-usuario">
+                👤
+            </div>
+
+            <div class="conteudo-comentario">
+
+                <div class="nome">
+                    Felipe Flausino
+                </div>
+
+                <div class="tempo">
+                    1 semana atrás
+                </div>
+
+                <div class="estrelas-texto">
+                    ★★★★★
+                </div>
+
+                <div class="texto-comentario">
+                  Atendimento rápido e comida deliciosa.
+                </div>
+
+                <div class="acoes">
+                    <a href="#">↩ Responder</a>
+                    <a href="#">👍 Curtir</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Comentário 4 -->
+
+        <div class="comentario">
+
+            <div class="foto-usuario">
+                👤
+            </div>
+
+            <div class="conteudo-comentario">
+
+                <div class="nome">
+                    Allana
+                </div>
+
+                <div class="tempo">
+                    1 semana atrás
+                </div>
+
+                <div class="estrelas-texto">
+                    ★★★★★
+                </div>
+
+                <div class="texto-comentario">
+                    Melhor hambúrguer da cidade.
+                </div>
+
+                <div class="acoes">
+                    <a href="#">↩ Responder</a>
+                    <a href="#">👍 Curtir</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div id="modal" class="modal">
+
+    <div class="caixa-comentario">
+
+        <h2>Avalie nosso atendimento</h2>
+
+        <div class="estrelas">
+
+            <input type="radio" id="estrela5" name="estrela">
+            <label for="estrela5">★</label>
+
+            <input type="radio" id="estrela4" name="estrela">
+            <label for="estrela4">★</label>
+
+            <input type="radio" id="estrela3" name="estrela">
+            <label for="estrela3">★</label>
+
+            <input type="radio" id="estrela2" name="estrela">
+            <label for="estrela2">★</label>
+
+            <input type="radio" id="estrela1" name="estrela">
+            <label for="estrela1">★</label>
+
+        </div>
+
+        <textarea placeholder="Conte para nós como foi sua experiência..."></textarea>
+
+        <div class="botoes">
+
+            <button id="cancelar">
+                Cancelar
+            </button>
+
+            <button id="enviar">
+                Enviar
+            </button>
+
+        </div>
+
+    </div>
+<script>
+
+const modal = document.getElementById("modal");
+
+document.getElementById("abrirComentario").addEventListener("click", function(){
+
+    modal.style.display = "flex";
+
+});
+
+document.getElementById("cancelar").addEventListener("click", function(){
+
+    modal.style.display = "none";
+
+});
+
+window.addEventListener("click", function(e){
+
+    if(e.target == modal){
+
+        modal.style.display = "none";
+
+    }
+
+});
+
+</script>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forma de Pagamento</title>
+
+    <link rel="stylesheet" href="../css-carrinho/forma-pagamento.css">
+    
+
+</head>
+
+<body>
+
+<header class="topo">
+    <a href="../html/tela-inicial.html">
+    <img src="../imagens/logo.png" class="logo">
+    </a>
+
+        <nav>
+            <a href="../html/tela-inicial.html">Inicio</a>
+            <a href="../html/tela-inicial.html">Promoções do dia</a>
+            <a href="../html/cardapio.html">Cardápio</a>
+            <a href="../html/contato.html">Contato</a>
+            <a href="../html/avaliacoes.html">Avaliações</a>
+        </nav>
+
+    <div class="icones">
+        <img src="../imagens/perfil.png" class="icone-img">
+        <img src="../imagens/carrinho.png" class="icone-img">
+    </div>
+</header>
+
+
+<section class="pagamento-section">
+
+<form>
+
+
+<!-- LADO ESQUERDO -->
+
+<div class="pagamento-esquerda">
+
+    <h1>Selecione a Forma de pagamento:</h1>
+
+
+    <div class="pagamento-box">
+
+        <label class="forma-pagamento">
+
+            <div class="lado-esquerdo">
+                <input type="radio" name="pagamento">
+                <span>Dinheiro</span>
+            </div>
+
+            <img src="../imagens/dinheiro.png">
+
+        </label>
+
+
+
+        <label class="forma-pagamento">
+
+            <div class="lado-esquerdo">
+                <input type="radio" name="pagamento">
+                <span>Pix</span>
+            </div>
+
+            <img src="../imagens/pix.png">
+
+        </label>
+
+
+
+        <label class="forma-pagamento">
+
+            <div class="lado-esquerdo">
+                <input type="radio" name="pagamento">
+                <span>Cartão</span>
+            </div>
+
+            <img src="../imagens/cart.png">
+
+        </label>
+
+    </div>
+
+
+
+    <!-- TROCO AGORA FICA AQUI -->
+
+    <div class="troco-box">
+
+        <h3>Precisa de Troco?</h3>
+
+
+        <div class="troco-input">
+
+            <label>
+                <input type="radio" name="troco">
+                Quantos:
+            </label>
+
+
+            <input type="text">
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<!-- LADO DIREITO -->
+
+<div class="pagamento-direita">
+
+
+    <div class="resumo-pagamento">
+
+        <h2>Resumo do Pedido</h2>
+
+
+        <div class="endereco-box">
+
+            <img src="../imagens/loja.png">
+
+
+            <div>
+
+                <p>Rua Alegria, 1234, Norte</p>
+                <p>Cidade: Colinas-TO</p>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="linha-pagamento">
+
+            <span>Subtotal:</span>
+            <span>75,98</span>
+
+        </div>
+
+
+
+        <div class="linha-pagamento">
+
+            <span>Entrega:</span>
+            <span>5,00</span>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="total-pagamento">
+
+            <span>Total:</span>
+            <span>80,98</span>
+
+        </div>
+
+
+    </div>
+
+    <div class="botoes-pagamento">
+
+       <button type="button" class="btn-cancelar" onclick="window.location.href='endereco.html'">
+         Cancelar
+       </button>
+
+        <button type="button" class="btn-confirmar" onclick="window.location.href='confirmacao.html'">
+        Confirmar
+        </button>
+
+        </div>
+
+
+</div>
+</form>
+</section>
+
+</body>
+</html>

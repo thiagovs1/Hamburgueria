@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrador</title>
+
+    <link rel="stylesheet" href="../Adm.css/adm.css">
+
+    <!-- Fonte -->
+    
+</head>
+
+
+ <body>
+
+<section id="inicio">
+
+    <div class="tela-preta"></div>
+
+    <main class="login">
+
+        <span class="titulo-site">
+            Cerrado Burguer
+        </span>
+
+        <img src="../../imagens/logo.png" class="logo">
+
+        <h1>Bem-vindo de volta!</h1>
+
+        <p>Faça login para acessar o painel administrativo</p>
+
+        <form action="adm-inicio.html" method="GET">
+
+            <label>E-mail:</label>
+            <input type="email" placeholder="seu@email.com">
+
+            <label>Senha:</label>
+            <input type="password" placeholder="123456">
+
+            <div class="linha">
+
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+                    Lembre de mim
+                </label>
+
+                <a href="recuperar-senha.html">Esqueceu sua senha?</a>
+
+            </div>
+
+            <button type="submit">Entrar na conta</button>
+
+        </form>
+    <div class="opcoes">
+                    <a href="recuperar.html">Esqueci a senha</a>
+                    <a href="cadastra.html">Cadastrar</a>
+                    <a href="../html/tela-inicial.html">Cancelar</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const erro = urlParams.get('erro');
+            const sucesso = urlParams.get('sucesso');
+            const mensagemElement = document.getElementById('mensagem');
+
+            if (erro) {
+                mensagemElement.innerText = erro;
+                mensagemElement.style.color = 'red';
+            } else if (sucesso) {
+                mensagemElement.innerText = sucesso;
+                mensagemElement.style.color = 'green';
+                
+               
+                if (sucesso === 'Login realizado') {
+                    setTimeout(() => {
+                        window.location.href = '../html/tela-inicial.html';
+                    }, 500);
+                }
+            }
+        </script>
+
+        <div class="rodape">
+            🛡 acesso restrito a administradores
+        </div>
+
+    </main>
+
+</section>
+
+</body>
+
+
+</html>
