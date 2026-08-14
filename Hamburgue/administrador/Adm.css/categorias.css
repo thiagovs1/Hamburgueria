@@ -14,9 +14,9 @@ body{
 /* Sidebar */
 
 .sidebar{
-    width:240px;
-    height:100vh;
-    background:#f8edd4;
+    width:225px;
+    background:#fff4df;
+    border-right:1px solid #ead3ab;
     display:flex;
     flex-direction:column;
 }
@@ -119,3 +119,4 @@ nav a:hover{
 
     background:#ecd6a6;
 }
+

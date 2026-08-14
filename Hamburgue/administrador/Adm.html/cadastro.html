@@ -4,24 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel Administrativo</title>
+
+    <title>Cadastro de Produtos</title>
 
     <link rel="stylesheet" href="../Adm.css/cadastro.css">
 
-   
 </head>
 
 <body>
 
+    <!-- SIDEBAR -->
+
     <div class="sidebar">
 
         <div class="logo-area">
+
             <img src="../../imagens/logo.png" alt="Logo">
 
             <div>
                 <h2>Cerrado Burguer</h2>
                 <span>Painel Administrativo</span>
             </div>
+
         </div>
 
         <nav>
@@ -36,7 +40,7 @@
                 Pedidos
             </a>
 
-            <a href="cadastro.html">
+            <a class="ativo" href="cadastro.html">
                 <img src="../../imagens/icon-hamburguerpng.png">
                 Cadastro
             </a>
@@ -85,18 +89,372 @@
 
     </div>
 
+
+    <!-- CONTEÚDO -->
+
     <main class="conteudo">
 
-    </main>
-<script>
-const links = document.querySelectorAll("nav a");
+        <!-- CABEÇALHO -->
 
-links.forEach(link => {
-    if (link.href === window.location.href) {
-        link.classList.add("ativo");
-    }
-});
-</script>
+        <div class="topo">
+
+            <h1>Cadastrar Produto</h1>
+            <button class="voltar" onclick="history.back()">
+                <span class="seta-voltar">←</span>
+                Voltar
+            </button>
+
+        </div>
+
+
+        <!-- ÁREA PRINCIPAL -->
+
+        <div class="area-cadastro">
+
+
+            <!-- FORMULÁRIO -->
+
+            <section class="formulario">
+
+                <h2>Informações Básicas</h2>
+
+
+                <div class="campo">
+
+                    <label>
+                        Nome do Produto <b>*</b>
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Ex: Burguer Clássico">
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>
+                        Descrição <b>*</b>
+                    </label>
+
+                    <textarea
+                        placeholder="Descreva os ingredientes e detalhes do produto"></textarea>
+
+                </div>
+
+
+                <div class="linha">
+
+                    <div class="campo preco">
+
+                        <label>
+                            Preço <b>*</b>
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="0,00">
+
+                    </div>
+
+
+                    <div class="campo categoria">
+
+                        <label>
+                            Categoria <b>*</b>
+                        </label>
+
+                        <select>
+
+                            <option value="">
+                                Selecione a categoria
+                            </option>
+
+                            <option>Hambúrguer</option>
+                            <option>Bebidas</option>
+                            <option>Acompanhamentos</option>
+                            <option>Combos</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div class="campo status-campo">
+
+                    <label>
+                        Status <b>*</b>
+                    </label>
+
+                    <div class="status-opcoes">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="status"
+                                checked>
+
+                            Ativo
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="status">
+
+                            Inativo
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMAGEM -->
+
+                <div class="campo imagem-campo">
+
+                    <label>Imagem do Produto</label>
+
+                    <small>
+                        Adicione uma imagem atraente ao produto
+                    </small>
+
+                    <div class="upload">
+
+                        <input
+                            type="file"
+                            id="imagem"
+                            accept="image/png,image/jpeg">
+
+                        <label for="imagem" class="arquivo">
+                            Escolher arquivo
+                        </label>
+
+                        <span id="nome-arquivo">
+                            Nenhum arquivo escolhido
+                        </span>
+
+                    </div>
+
+                    <small class="formatos">
+                        PNG, JPG, WEBP até 5MB
+                    </small>
+
+                </div>
+
+
+                <!-- INFORMAÇÕES ADICIONAIS -->
+
+                <div class="adicionais">
+
+                    <h3>Informações Adicionais</h3>
+
+
+                    <div class="tempo">
+
+                        <label>
+                            Tempo de preparo (min)
+                        </label>
+
+                        <input
+                            type="number"
+                            min="0">
+
+                    </div>
+
+
+                    <div class="opcoes">
+
+                        <label class="check">
+
+                            <input type="checkbox" checked>
+
+                            <span></span>
+
+                            Produto em Promoção
+
+                        </label>
+
+
+                        <label class="check">
+
+                            <input type="checkbox">
+
+                            <span></span>
+
+                            Disponível para entrega
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTÕES -->
+
+                <div class="botoes">
+
+                    <button class="limpar" type="reset">
+                        🗑
+                        Limpar
+                    </button>
+
+                    <button class="salvar" type="submit">
+                        Salvar Produto
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PRODUTOS CADASTRADOS -->
+
+            <section class="produtos">
+
+                <h2>Produtos Cadastrados</h2>
+
+
+                <div class="tabela-cabecalho">
+
+                    <span>Nome</span>
+                    <span>Categoria</span>
+                    <span>Preço</span>
+                    <span>Status</span>
+                    <span>Ações</span>
+
+                </div>
+
+
+                <!-- PRODUTO 1 -->
+
+                <div class="produto">
+
+                    <span>Coca-Cola 1L</span>
+
+                    <span>Bebidas</span>
+
+                    <span>6,99</span>
+
+                    <span>Ativo</span>
+
+                    <div class="acoes">
+
+                        <button class="editar">
+                            ✎ Editar
+                        </button>
+
+                        <button class="excluir">
+                            🗑
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 2 -->
+
+                <div class="produto">
+
+                    <span>X-Burguer</span>
+
+                    <span>Hambúrguer</span>
+
+                    <span>38,00</span>
+
+                    <span>Ativo</span>
+
+                    <div class="acoes">
+
+                        <button class="editar">
+                            ✎ Editar
+                        </button>
+
+                        <button class="excluir">
+                            🗑
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 3 -->
+
+                <div class="produto">
+
+                    <span>Batata Frita 500g</span>
+
+                    <span>Acompanhamentos</span>
+
+                    <span>7,80</span>
+
+                    <span>Ativo</span>
+
+                    <div class="acoes">
+
+                        <button class="editar">
+                            ✎ Editar
+                        </button>
+
+                        <button class="excluir">
+                            🗑
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        const links = document.querySelectorAll("nav a");
+
+        links.forEach(link => {
+
+            if (link.href === window.location.href) {
+                link.classList.add("ativo");
+            }
+
+        });
+
+
+        const imagem = document.getElementById("imagem");
+
+        imagem.addEventListener("change", function () {
+
+            const nome = document.getElementById("nome-arquivo");
+
+            if (this.files.length > 0) {
+
+                nome.textContent = this.files[0].name;
+
+            } else {
+
+                nome.textContent = "Nenhum arquivo escolhido";
+
+            }
+
+        });
+
+    </script>
+
 </body>
 
 </html>

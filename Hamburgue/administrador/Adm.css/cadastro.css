@@ -1,121 +1,768 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-
-    display:flex;
-    background:#ecd6a6;
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #f6e5ba;
+    color: #5d2d13;
 }
 
-/* Sidebar */
 
-.sidebar{
-    width:240px;
-    height:100vh;
-    background:#f8edd4;
-    display:flex;
-    flex-direction:column;
-}
-/* Logo */
+/* =========================
+   SIDEBAR
+========================= */
 
-.logo-area{
+.sidebar {
+    width: 225px;
+    min-height: 100vh;
+    background: #fff4df;
+    border-right: 1px solid #ead3ab;
 
-    display:flex;
-    align-items:center;
-
-    gap:12px;
-
-    padding:18px;
+    display: flex;
+    flex-direction: column;
 }
 
-.logo-area img{
 
-    width:45px;
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 17px 15px;
 }
 
-.logo-area h2{
 
-    font-size:18px;
-    color:#d05c0c;
+.logo-area img {
+    width: 42px;
 }
 
-.logo-area span{
 
-    font-size:11px;
-    color:#777;
+.logo-area h2 {
+    color: #d45c1e;
+    font-size: 18px;
+    line-height: 20px;
 }
 
-/* Menu */
 
-nav{
-    flex:1;          /* ocupa todo o espaço disponível */
-    margin-top:15px;
+.logo-area span {
+    color: #444;
+    font-size: 10px;
 }
 
-nav a{
 
-    display:flex;
-    align-items:center;
-
-    gap:14px;
-
-    text-decoration:none;
-
-    color:#603813;
-
-    padding:14px 20px;
-
-    transition:.3s;
+nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
 }
 
-nav a img{
 
-    width:20px;
+nav a {
+    height: 57px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 0 18px;
+
+    text-decoration: none;
+
+    color: #5f2d12;
+
+    font-size: 15px;
+
+    transition: .2s;
 }
 
-nav a:hover{
 
-    background:#edd3af;
+nav a img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
 }
 
-.ativo{
 
-    background:#e8b783;
+nav a:hover {
+    background: #efc89f;
 }
 
-/* Sair */
-.sair{
-    margin-top:auto;
-    display:flex;
-    align-items:center;
-    gap:14px;
-    padding:16px 20px;
-    text-decoration:none;
-    color:#603813;
-}
-.sair:hover{
-    background:#edd3af;
+
+nav a.ativo {
+    background: #eab07d;
 }
 
-.sair img{
 
-    width:20px;
+.sair {
+    margin-top: auto;
+
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 0 25px;
+
+    text-decoration: none;
+
+    color: #5f2d12;
+
+    font-size: 15px;
 }
 
-.sair:hover{
 
-    background:#edd3af;
+.sair img {
+    width: 27px;
 }
 
-/* Conteúdo */
 
-.conteudo{
+/* =========================
+   CONTEÚDO
+========================= */
 
-    flex:1;
+.conteudo {
+    flex: 1;
 
-    background:#ecd6a6;
+    padding: 20px 12px 25px;
+
+    min-width: 0;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.topo {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin: 0 5px 10px 5px;
+}
+
+
+.topo h1 {
+    color: #5d2d13;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+.voltar {
+    position: relative;
+
+    border: none;
+    background: white;
+
+    color: #555;
+
+    height: 35px;
+    width: 111px;
+
+    padding: 0;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.voltar {
+    border: none;
+
+    background: white;
+
+    color: #555;
+
+    height: 35px;
+
+    padding: 0 18px 0 12px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.seta-voltar {
+    font-size: 24px;
+    line-height: 1;
+
+    font-weight: 400;
+
+    color: #555;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-1px);
+}
+
+.voltar:hover {
+    background: #f4f4f4;
+}
+
+.voltar:hover .seta-voltar {
+    transform: translate(-3px, -1px);
+}
+/* =========================
+   ÁREA DE CADASTRO
+========================= */
+
+.area-cadastro {
+    display: grid;
+
+    grid-template-columns: 495px 1fr;
+
+    gap: 13px;
+
+    align-items: stretch;
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.formulario {
+    background: #fffdf9;
+
+    border-radius: 18px;
+
+    padding: 10px 25px 15px;
+
+    min-height: 650px;
+}
+
+
+.formulario h2 {
+    font-size: 15px;
+
+    color: #693316;
+
+    margin-bottom: 18px;
+}
+
+
+.campo {
+    margin-bottom: 14px;
+}
+
+
+.campo label {
+    display: block;
+
+    color: #663116;
+
+    font-size: 13px;
+
+    margin-bottom: 3px;
+}
+
+
+.campo label b {
+    color: #d45125;
+}
+
+
+.campo input[type="text"],
+.campo input[type="number"],
+.campo select {
+    width: 100%;
+
+    height: 31px;
+
+    border: 1px solid #222;
+
+    background: #fff;
+
+    padding: 4px;
+
+    color: #555;
+
+    font-size: 13px;
+}
+
+
+.campo textarea {
+    width: 100%;
+
+    height: 76px;
+
+    resize: none;
+
+    border: 1px solid #222;
+
+    padding: 5px;
+
+    font-size: 13px;
+
+    color: #555;
+}
+
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #777;
+}
+
+
+/* =========================
+   PREÇO / CATEGORIA
+========================= */
+
+.linha {
+    display: flex;
+
+    gap: 11px;
+}
+
+
+.preco {
+    width: 160px;
+}
+
+
+.categoria {
+    flex: 1;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status-campo {
+    margin-top: 2px;
+}
+
+
+.status-opcoes {
+    display: flex;
+
+    gap: 45px;
+
+    align-items: center;
+}
+
+
+.status-opcoes label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #663116;
+}
+
+
+.status-opcoes input {
+    width: 16px;
+
+    height: 16px;
+
+    accent-color: #222;
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.imagem-campo {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+
+.imagem-campo > label {
+    margin-bottom: 0;
+}
+
+
+.imagem-campo small {
+    display: block;
+
+    color: #777;
+
+    font-size: 8px;
+
+    margin-bottom: 5px;
+}
+
+
+.upload {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.upload input {
+    display: none;
+}
+
+
+.arquivo {
+    background: #ddd;
+
+    border: 1px solid #333;
+
+    padding: 5px 12px;
+
+    font-size: 12px !important;
+
+    color: #5d2d13 !important;
+
+    cursor: pointer;
+
+    margin: 0 !important;
+}
+
+
+#nome-arquivo {
+    font-size: 13px;
+
+    color: #4b2b1c;
+
+    white-space: nowrap;
+}
+
+
+.formatos {
+    margin-top: 2px;
+}
+
+
+/* =========================
+   INFORMAÇÕES ADICIONAIS
+========================= */
+
+.adicionais h3 {
+    font-size: 15px;
+
+    color: #693316;
+
+    margin-bottom: 1px;
+}
+
+
+.tempo label {
+    display: block;
+
+    font-size: 13px;
+
+    color: #663116;
+
+    margin-bottom: 3px;
+}
+
+
+.tempo input {
+    width: 160px;
+
+    height: 23px;
+
+    border: 1px solid #222;
+}
+
+
+.opcoes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+
+    margin-top: 27px;
+}
+
+
+.opcoes {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-top: 25px;
+}
+
+
+.check input:checked + span {
+    background: #693316;
+    border-color: #693316;
+}
+
+.check input:checked + span::after {
+    content: "✓";
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -52%);
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botoes {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 13px;
+
+    margin-top: 41px;
+}
+
+
+.botoes button {
+    height: 35px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 0 16px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+.limpar {
+    background: #c46d3c;
+
+    color: #111;
+}
+
+
+.salvar {
+    background: #d95400;
+
+    color: #000;
+
+    min-width: 146px;
+}
+
+
+/* =========================
+   PRODUTOS CADASTRADOS
+========================= */
+
+.produtos {
+    background: #fffdf9;
+
+    border-radius: 18px;
+
+    min-height: 650px;
+
+    overflow: hidden;
+}
+
+
+.produtos h2 {
+    height: 57px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 28px;
+
+    font-size: 19px;
+
+    color: #693316;
+}
+
+
+/* =========================
+   CABEÇALHO DA TABELA
+========================= */
+
+.tabela-cabecalho {
+    height: 43px;
+
+    background: #e8af8b;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        1.1fr
+        .8fr
+        .8fr
+        1fr;
+
+    align-items: center;
+
+    padding: 0 22px;
+
+    color: #24150e;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.produto {
+    min-height: 68px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        1.1fr
+        .8fr
+        .8fr
+        1fr;
+
+    align-items: center;
+
+    padding: 0 22px;
+
+    border-bottom: 1px solid #765844;
+
+    color: #24150e;
+
+    font-size: 13px;
+}
+
+
+.acoes {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+
+.editar {
+    height: 29px;
+
+    padding: 0 13px;
+
+    background: #f1e3c2;
+
+    border: 1px solid #222;
+
+    border-radius: 10px;
+
+    color: #5d2d13;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.excluir {
+    width: 36px;
+    height: 32px;
+
+    border: 2px solid #ff4d00;
+    border-radius: 9px;
+
+    background: #fff3eb;
+    color: #e63f00;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.excluir:hover {
+    background: #ff4d00;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1200px) {
+
+    .area-cadastro {
+        grid-template-columns: 450px 1fr;
+    }
+
+    .formulario {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .area-cadastro {
+        grid-template-columns: 1fr;
+    }
+
+    .produtos {
+        min-height: 500px;
+    }
+
 }
