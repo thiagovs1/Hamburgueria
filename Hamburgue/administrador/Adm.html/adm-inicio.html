@@ -26,7 +26,7 @@
 
         <nav>
 
-            <a class="ativo" href="#">
+            <a href="adm-inicio.html">
                 <img src="../../imagens/icon-inicio.png">
                 Início
             </a>
@@ -36,49 +36,49 @@
                 Pedidos
             </a>
 
-            <a href="#">
+            <a href="cadastro.html">
                 <img src="../../imagens/icon-hamburguerpng.png">
                 Cadastro
             </a>
 
-            <a href="#">
+            <a href="categorias.html">
                 <img src="../../imagens/icon-categorias.png">
                 Categorias
             </a>
 
-            <a href="#">
+            <a href="relatorio.html">
                 <img src="../../imagens/icon-relatorio.png">
                 Relatório
             </a>
 
-            <a href="#">
+            <a href="promocoes.html">
                 <img src="../../imagens/icon-promocoes.png">
                 Promoção
             </a>
 
-            <a href="#">
+            <a href="clientes.html">
                 <img src="../../imagens/icon-clientes.png">
                 Clientes
             </a>
 
-            <a href="#">
+            <a href="entregas.html">
                 <img src="../../imagens/icon-entrega.png">
                 Entregas
             </a>
 
-            <a href="#">
+            <a href="avaliacoes.html">
                 <img src="../../imagens/icon-avaliacoes.png">
                 Avaliação
             </a>
 
-            <a href="#">
+            <a href="configuracoes.html">
                 <img src="../../imagens/icon-configuracoes.png">
                 Configurações
             </a>
 
         </nav>
 
-        <a href="#" class="sair">
+        <a href="sair.html" class="sair">
             <img src="../../imagens/icon-sair.png">
             Sair
         </a>
@@ -88,7 +88,15 @@
     <main class="conteudo">
 
     </main>
+<script>
+const links = document.querySelectorAll("nav a");
 
+links.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add("ativo");
+    }
+});
+</script>
 </body>
 
 </html>
