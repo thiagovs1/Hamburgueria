@@ -11,8 +11,6 @@ body{
     background:#ecd6a6;
 }
 
-/* Sidebar */
-
 .sidebar{
     width:225px;
     background:#fff4df;
@@ -20,7 +18,6 @@ body{
     display:flex;
     flex-direction:column;
 }
-/* Logo */
 
 .logo-area{
 
@@ -49,10 +46,9 @@ body{
     color:#777;
 }
 
-/* Menu */
 
 nav{
-    flex:1;          /* ocupa todo o espaço disponível */
+    flex:1;        
     margin-top:15px;
 }
 
@@ -87,7 +83,6 @@ nav a:hover{
     background:#e8b783;
 }
 
-/* Sair */
 .sair{
     margin-top:auto;
     display:flex;
@@ -111,7 +106,7 @@ nav a:hover{
     background:#edd3af;
 }
 
-/* Conteúdo */
+
 
 .conteudo{
 

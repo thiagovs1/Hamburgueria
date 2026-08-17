@@ -12,11 +12,6 @@ body {
     color: #5d2d13;
 }
 
-
-/* =========================
-   SIDEBAR
-========================= */
-
 .sidebar {
     width: 225px;
     min-height: 100vh;
@@ -123,10 +118,6 @@ nav a.ativo {
 }
 
 
-/* =========================
-   CONTEÚDO
-========================= */
-
 .conteudo {
     flex: 1;
 
@@ -135,10 +126,6 @@ nav a.ativo {
     min-width: 0;
 }
 
-
-/* =========================
-   TOPO
-========================= */
 
 .topo {
     display: flex;
@@ -234,9 +221,7 @@ nav a.ativo {
 .voltar:hover .seta-voltar {
     transform: translate(-3px, -1px);
 }
-/* =========================
-   ÁREA DE CADASTRO
-========================= */
+
 
 .area-cadastro {
     display: grid;
@@ -248,10 +233,6 @@ nav a.ativo {
     align-items: stretch;
 }
 
-
-/* =========================
-   FORMULÁRIO
-========================= */
 
 .formulario {
     background: #fffdf9;
@@ -335,11 +316,6 @@ nav a.ativo {
     color: #777;
 }
 
-
-/* =========================
-   PREÇO / CATEGORIA
-========================= */
-
 .linha {
     display: flex;
 
@@ -355,11 +331,6 @@ nav a.ativo {
 .categoria {
     flex: 1;
 }
-
-
-/* =========================
-   STATUS
-========================= */
 
 .status-campo {
     margin-top: 2px;
@@ -398,10 +369,6 @@ nav a.ativo {
     accent-color: #222;
 }
 
-
-/* =========================
-   IMAGEM
-========================= */
 
 .imagem-campo {
     margin-top: 20px;
@@ -468,11 +435,6 @@ nav a.ativo {
 .formatos {
     margin-top: 2px;
 }
-
-
-/* =========================
-   INFORMAÇÕES ADICIONAIS
-========================= */
 
 .adicionais h3 {
     font-size: 15px;
@@ -543,10 +505,6 @@ nav a.ativo {
     transform: translate(-50%, -52%);
 }
 
-/* =========================
-   BOTÕES
-========================= */
-
 .botoes {
     display: flex;
 
@@ -589,10 +547,6 @@ nav a.ativo {
 }
 
 
-/* =========================
-   PRODUTOS CADASTRADOS
-========================= */
-
 .produtos {
     background: #fffdf9;
 
@@ -619,10 +573,6 @@ nav a.ativo {
 }
 
 
-/* =========================
-   CABEÇALHO DA TABELA
-========================= */
-
 .tabela-cabecalho {
     height: 43px;
 
@@ -646,10 +596,6 @@ nav a.ativo {
     font-size: 13px;
 }
 
-
-/* =========================
-   PRODUTOS
-========================= */
 
 .produto {
     min-height: 68px;
@@ -732,10 +678,6 @@ nav a.ativo {
     color: white;
     transform: scale(1.05);
 }
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
 
 @media (max-width: 1200px) {
 
