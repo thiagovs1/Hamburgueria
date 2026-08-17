@@ -3,12 +3,10 @@ html {
 }
 
 body {
-    background-color: #ecd6a6;
-    margin: 0;
-    font-family: Georgia, Arial, Helvetica, sans-serif;
+    background-color: #ecd6a6; margin: 0;font-family: Georgia, Arial, Helvetica, sans-serif;
 }
 
-/* ===== TOPO IGUAL AO PRINCIPAL ===== */
+
 
 .topo {
     background-color: #fdf3dd;
@@ -63,7 +61,7 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* ===== CARD DE LOGIN REDUZIDO ===== */
+
 .area-login {
     display: flex;
     justify-content: center;
@@ -96,7 +94,7 @@ h1 {
     font-size: 14px;
 }
 
-/* ===== FORMULÁRIO COMPACTO ===== */
+
 form {
     display: flex;
     flex-direction: column;
@@ -107,7 +105,7 @@ label {
     font-size: 14px;
     color: #333;
     font-weight: bold;
-    margin-bottom: -8px; /* Mantém o padrão de proximidade do input */
+    margin-bottom: -8px; 
 }
 
 input {

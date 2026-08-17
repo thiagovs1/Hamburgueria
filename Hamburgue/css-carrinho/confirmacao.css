@@ -7,7 +7,15 @@ body {
     font-family: Georgia, Arial, Helvetica, sans-serif;
 }
 .icons a img {cursor: pointer; }
-.topo { background-color: #fdf3dd; display: flex; align-items: center;justify-content: center; gap: 40px; padding: 5px 50px; position: fixed; width: 100%; z-index: 1000;} .logo { width: 100px ;} nav {display: flex ;gap: 70px ;} nav a { text-decoration: none ;color: #481c11 ;font-size: 20px;font-weight: normal;} nav a:hover {color: #f36f40; ;}
+.topo { background-color: #fdf3dd; 
+    display: flex; align-items: center;
+    justify-content: center; gap: 40px; 
+    padding: 5px 50px; position: fixed; 
+    width: 100%; z-index: 1000;} 
+    
+.logo { width: 100px ;} nav {display: flex ;gap: 70px ;} nav a { text-decoration: none ;
+    color: #481c11 ;
+    font-size: 20px;font-weight: normal;} nav a:hover {color: #f36f40; ;}
 
 .icones {display: flex ;gap: 10px ;}
 

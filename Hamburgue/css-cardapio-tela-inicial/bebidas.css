@@ -2,7 +2,9 @@ html {
     scroll-behavior: smooth; }
 
 body {
-    background-color: #fdf3dd; margin: 0; font-family: Georgia, Arial, Helvetica, sans-serif; }
+    background-color: #fdf3dd;
+     margin: 0;
+      font-family: Georgia, Arial, Helvetica, sans-serif; }
 
 .icons a img {
     cursor: pointer; }
@@ -24,16 +26,20 @@ body {
     width: 100px; }
 
 .menu {
-    display: flex; gap: 70px; }
+    display: flex; 
+    gap: 70px; }
 
 .menu a {
-    text-decoration: none; color: #481c11; font-size: 20px; }
+    text-decoration: none; 
+    color: #481c11;
+     font-size: 20px; }
 
 .menu a:hover {
     color: #f36f40; }
 
 .icons {
-    display: flex; gap: 10px; }
+    display: flex; 
+    gap: 10px; }
 
 .icons img {
     width: 45px; }
